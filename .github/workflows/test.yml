@@ -17,7 +17,7 @@ jobs:
               id: getname
               run: | 
                 cd code
-                echo "filename=$(basename *.apk)" >> $GITHUB_OUTPUT
+                echo "filename=$(basename -s .apk *.apk)" >> $GITHUB_OUTPUT
             
             - name: Test output
               run:  echo ${{ steps.getname.outputs.filename }}
