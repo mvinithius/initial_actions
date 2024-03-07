@@ -19,11 +19,12 @@ jobs:
         run: |
           echo "done!"
 
+      - name: Enter code dir
+        run: cd code
+
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
             code/*.apk
-            'code/*.apk'
-            "code/*.apk"
