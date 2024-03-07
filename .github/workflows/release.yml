@@ -19,8 +19,8 @@ jobs:
         run: |
           echo "done!"
 
-      - name: Enter code dir
-        run: cd code
+      - name: Enter dir
+        run: cd ./code/
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
