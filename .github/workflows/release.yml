@@ -24,4 +24,6 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
           files: |
-            ./code/*.apk
+            code/*.apk
+            'code/*.apk'
+            "code/*.apk"
